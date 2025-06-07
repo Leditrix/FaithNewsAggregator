@@ -1,7 +1,7 @@
 const quoteImagePairs = [
   {
     quote: '“Love your neighbor as yourself.” – Matthew 22:39',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Notre-Dame_de_Paris_2013-07-24.jpg/640px-Notre-Dame_de_Paris_2013-07-24.jpg'
+    image: 'https://www.churchofjesuschrist.org/imgs/d2eb9d2a83554a7e87d070efb7250b3da13a456a/full/1600%2C/0/default'
   }
 ];
 
