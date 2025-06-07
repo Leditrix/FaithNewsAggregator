@@ -48,6 +48,20 @@ function loadQuote() {
   document.getElementById('dailyQuote').textContent = quote;
 }
 
+function showDateTime() {
+  const dt = new Date();
+  const localeTime = dt.toLocaleString(undefined, {
+    dateStyle: 'full',
+    timeStyle: 'short'
+  });
+
+  const timeEl = document.createElement('div');
+  timeEl.id = 'datetime';
+  timeEl.textContent = localeTime;
+
+  document.querySelector('.subhead').insertAdjacentElement('afterend', timeEl);
+}
+
 async function loadFeeds() {
   for (const [religion, urls] of Object.entries(feeds)) {
     const articles = [];
@@ -70,6 +84,10 @@ async function loadFeeds() {
     section.classList.add('news-block');
     section.innerHTML = `<h2>${religion}</h2>`;
 
+    if (religion === "Religion & Ethics") {
+      section.querySelector('h2').style.color = 'red';
+    }
+
     if (articles.length > 0) {
       section.innerHTML += articles
         .slice(0, 6)
@@ -86,4 +104,5 @@ async function loadFeeds() {
 window.onload = () => {
   loadQuote();
   loadFeeds();
+  showDateTime();
 };
