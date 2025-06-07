@@ -1,7 +1,7 @@
 const feeds = {
   "Catholicism": ["https://www.vaticannews.va/en.rss.xml"],
   "Orthodox Christianity": [
-    "https://www.oca.org/news/portfolio-type/news?feed=rss2",
+    "https://www.oca.org/news/feed",
     "https://orthochristian.com/rss.xml"
   ],
   "Latter-day Saints": ["https://newsroom.churchofjesuschrist.org/rss"],
