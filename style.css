@@ -1,52 +1,86 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background: #fff;
-  color: #000;
+  background: #ffffff;
+  color: #000000;
+  text-align: center;
 }
 
 header {
-  background: #111;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
+  background: #ffffff;
+  color: #000000;
+  padding: 2rem 1rem 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .subhead {
-  font-size: 0.9rem;
-  color: #ccc;
+  font-size: 1rem;
+  color: #555;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
 }
 
 #quotes {
-  background: #f2f2f2;
-  padding: 1rem;
-  text-align: center;
   font-style: italic;
+  font-size: 0.95rem;
+  padding: 1rem;
+  color: #333;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 main {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
   gap: 1rem;
-  padding: 1rem;
 }
 
-section.news-block {
-  border: 1px solid #ccc;
-  padding: 1rem;
-  background: #fafafa;
+.news-block {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  text-align: center;
 }
 
-section.news-block h2 {
-  font-size: 1.1rem;
-  margin-top: 0;
+.news-block h2 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
   border-bottom: 1px solid #ddd;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
+}
+
+.news-block p {
+  margin: 0.25rem 0;
+}
+
+.news-block a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+.news-block a:hover {
+  text-decoration: underline;
 }
 
 footer {
   text-align: center;
-  padding: 1rem;
-  background: #eee;
-  font-size: 0.8rem;
+  padding: 2rem 1rem;
+  font-size: 0.75rem;
+  color: #666;
 }
