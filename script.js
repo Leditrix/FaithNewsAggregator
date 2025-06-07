@@ -1,13 +1,13 @@
 const feeds = {
-  "Judaism": "https://www.jta.org/feed",
   "Catholicism": "https://www.catholicnewsagency.com/rss.xml",
   "Orthodox Christianity": "https://orthochristian.com/rss.xml",
-  "Mainline Protestant": "https://umc.org/en/rss-feeds/news",
-  "Evangelical": "https://www.christianitytoday.com/ct/rss.xml"
   "Latter-day Saints": "https://newsroom.churchofjesuschrist.org/rss",
+  "Judaism": "https://www.jta.org/feed",
   "Islam": "https://muslimmatters.org/feed/",
   "Hinduism": "https://www.hinduismtoday.com/blogs-news/news/",
   "Buddhism": "https://tricycle.org/feed/",
+  "Mainline Protestant": "https://umc.org/en/rss-feeds/news",
+  "Evangelical": "https://www.christianitytoday.com/ct/rss.xml"
 };
 
 const quotes = [
@@ -30,13 +30,20 @@ async function loadFeeds() {
     try {
       const res = await fetch(api);
       const data = await res.json();
+
+      if (!data.items || data.items.length === 0) throw new Error('No items returned');
+
       const section = document.createElement('section');
       section.classList.add('news-block');
       section.innerHTML = `<h2>${religion}</h2>` + data.items.slice(0, 5).map(item =>
         `<p><a href="${item.link}" target="_blank">${item.title}</a></p>`).join('');
       document.getElementById('feedContainer').appendChild(section);
     } catch (error) {
-      console.error(`Error fetching ${religion}:`, error);
+      const fallback = document.createElement('section');
+      fallback.classList.add('news-block');
+      fallback.innerHTML = `<h2>${religion}</h2><p style="color:red;">(Feed failed to load)</p>`;
+      document.getElementById('feedContainer').appendChild(fallback);
+      console.error(`❌ Error loading ${religion}:`, error);
     }
   }
 }
