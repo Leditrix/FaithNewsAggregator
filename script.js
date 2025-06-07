@@ -1,8 +1,13 @@
 const quoteImagePairs = [
   {
     quote: '“Love your neighbor as yourself.” – Matthew 22:39',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/2/26/Notre-Dame_de_Paris_2013-07-24.jpg' // Christianity
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Notre-Dame_de_Paris_2013-07-24.jpg/640px-Notre-Dame_de_Paris_2013-07-24.jpg'
   },
+  {
+    quote: '“Blessed is the one who gives.” – Quran 57:18',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Sheikh_Zayed_Mosque.jpg/640px-Sheikh_Zayed_Mosque.jpg'
+  }
+];
   {
     quote: '“Blessed is the one who gives.” – Quran 57:18',
     image: 'https://upload.wikimedia.org/wikipedia/commons/0/00/Sheikh_Zayed_Mosque.jpg' // Islam
