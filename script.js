@@ -1,26 +1,26 @@
 const feeds = {
+  "Religion & Ethics": ["https://www.abc.net.au/news/feed/51120/rss.xml"],
+  "General Religion": ["https://religionnews.com/feed/"],
+  "Buddhism": ["https://tricycle.org/feed/"],
   "Catholicism": ["https://www.vaticannews.va/en.rss.xml"],
-  "Orthodox Christianity": [
-    "https://www.oca.org/news/feed",
-    "https://orthochristian.com/rss.xml"
-  ],
-  "Latter-day Saints": ["https://newsroom.churchofjesuschrist.org/rss"],
-  "Judaism": ["https://www.jta.org/feed"],
-  "Islam": ["https://aboutislam.net/blog/feed"],
   "Hinduism": [
     "https://www.hinduhumanrights.info/feed/",
     "https://timesofindia.indiatimes.com/rssfeeds/-2128936835.cms"
   ],
-  "Buddhism": ["https://tricycle.org/feed/"],
-  "Sikhism": ["https://www.sikh24.com/feed/"],
-  "Sojourners (Christian)": ["https://sojo.net/rss.xml"],
-  "Progressive Theology": ["http://www.progressivetheology.org/rss.xml"],
+  "Islam": ["https://aboutislam.net/blog/feed"],
+  "Judaism": ["https://www.jta.org/feed"],
+  "Latter-day Saints": ["https://newsroom.churchofjesuschrist.org/rss"],
   "Mainstream Christianity": [
     "https://christiantoday.com/rss.xml",
     "https://www.christianpost.com/rss/news.xml"
   ],
-  "General Religion": ["https://religionnews.com/feed/"],
-  "Religion & Ethics": ["https://www.abc.net.au/news/feed/51120/rss.xml"]
+  "Orthodox Christianity": [
+    "https://www.oca.org/news/feed",
+    "https://orthochristian.com/rss.xml"
+  ],
+  "Progressive Theology": ["http://www.progressivetheology.org/rss.xml"],
+  "Sikhism": ["https://www.sikh24.com/feed/"],
+  "Sojourners (Christian)": ["https://sojo.net/rss.xml"]
 };
 
 const quotes = [
@@ -29,7 +29,17 @@ const quotes = [
   '“All that we are is the result of what we have thought.” – Buddha',
   '“Let your aim be the good of all beings.” – Bhagavad Gita',
   '“Justice, justice shall you pursue.” – Deuteronomy 16:20',
-  '“If ye are prepared ye shall not fear.” – Doctrine & Covenants 38:30'
+  '“If ye are prepared ye shall not fear.” – Doctrine & Covenants 38:30',
+  '“Treat not others in ways that you yourself would find hurtful.” – The Buddha (Udana-Varga 5:18)',
+  '“Speak the truth, even if it is bitter.” – Prophet Muhammad (Hadith)',
+  '“We are all members of one another.” – Ephesians 4:25',
+  '“The earth is but one country, and mankind its citizens.” – Baháʼu’lláh',
+  '“Where there is charity and wisdom, there is neither fear nor ignorance.” – St. Francis of Assisi',
+  '“The best among you are those who bring greatest benefit to others.” – Prophet Muhammad',
+  '“Blessed are the peacemakers, for they shall be called children of God.” – Matthew 5:9',
+  '“One who performs their duty without attachment, surrendering the results to God, is unaffected by sin.” – Bhagavad Gita 5.10',
+  '“He who sees all beings in the Self, and the Self in all beings, never turns away from it.” – Isha Upanishad',
+  '“To serve is beautiful, but only if it is done with joy and a whole heart.” – Pearl S. Buck'
 ];
 
 function loadQuote() {
