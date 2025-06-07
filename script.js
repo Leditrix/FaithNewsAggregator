@@ -71,7 +71,10 @@ async function loadFeeds() {
   ],
   "Islam": ["https://aboutislam.net/blog/feed"],
   "Judaism": ["https://www.jta.org/feed"],
-  "Latter-day Saints": ["https://newsroom.churchofjesuschrist.org/rss"],
+  "Latter-day Saints": [
+    "https://newsroom.churchofjesuschrist.org/rss",
+    "https://www.ldsblogs.org/rss.xml"
+  ],
   "Mainstream Christianity": [
     "https://christiantoday.com/rss.xml",
     "https://www.christianpost.com/rss/news.xml"
