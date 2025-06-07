@@ -13,10 +13,10 @@ header {
 }
 
 h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: 3rem;
+  font-weight: 900;
   margin: 0;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   text-transform: uppercase;
 }
 
@@ -47,9 +47,10 @@ main {
 .news-block {
   padding: 1rem;
   min-height: 200px;
+  text-align: left;
 }
 
-/* Apply column borders only on first and third columns */
+/* Vertical lines only on sides of center column */
 .news-block:nth-child(3n+1) {
   border-right: 1px solid #ccc;
 }
@@ -66,6 +67,7 @@ main {
   color: #000;
   border-bottom: 1px solid #ddd;
   padding-bottom: 0.25rem;
+  text-align: center;
 }
 
 .news-block p {
@@ -78,6 +80,7 @@ main {
   font-weight: bold;
   font-size: 0.95rem;
   text-transform: none;
+  display: block;
 }
 
 .news-block a:hover {
