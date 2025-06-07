@@ -7,7 +7,30 @@ const quoteImagePairs = [
     quote: '“All that we are is the result of what we have thought.” – Buddha',
     image: 'https://raw.githubusercontent.com/Leditrix/FaithNewsAggregator/main/Buddhism%20-%20Tian_Tan_Buddha%20-%20Hong%20Kong.jpg'
   },
-  // (etc. — keep the rest of the pairs)
+  {
+    quote: '“Blessed are the peacemakers.” – Matthew 5:9',
+    image: 'https://raw.githubusercontent.com/Leditrix/FaithNewsAggregator/main/Catholic%20-%20North_rose_window_of_Notre-Dame_de_Paris,_Dec._2024.jpg'
+  },
+  {
+    quote: '“Love one another as I have loved you.” – John 13:34',
+    image: 'https://raw.githubusercontent.com/Leditrix/FaithNewsAggregator/main/Christian%20-%20The_Pietà_by_Michelangelo_(48135182552).jpg'
+  },
+  {
+    quote: '“Let your aim be the good of all beings.” – Bhagavad Gita',
+    image: 'https://raw.githubusercontent.com/Leditrix/FaithNewsAggregator/main/Hinduism%20–%20Madurai_Meenakshi_temple_prayer.jpg'
+  },
+  {
+    quote: '“Blessed is the one who gives.” – Quran 57:18',
+    image: 'https://raw.githubusercontent.com/Leditrix/FaithNewsAggregator/main/Islam%20–%20Sheikh%20Zayed%20Grand%20Mosque%20-%20Tilework_Inside_The_Sher_Dor_Madrasa.jpeg'
+  },
+  {
+    quote: '“Justice, justice shall you pursue.” – Deuteronomy 16:20',
+    image: 'https://raw.githubusercontent.com/Leditrix/FaithNewsAggregator/main/Judaism%20–%20Western%20Wall,%20Jerusalem%20-%20Westen_(Wailing)_Wall,_Jerusalem,_2007.jpg'
+  },
+  {
+    quote: '“If ye are prepared ye shall not fear.” – Doctrine & Covenants 38:30',
+    image: 'https://raw.githubusercontent.com/Leditrix/FaithNewsAggregator/main/Latter-day%20Saint%20-%20Nauvoo_Illinois_Temple_Southwest_Night_Perspective.jpg'
+  }
 ];
 
 function loadQuoteAndImage() {
