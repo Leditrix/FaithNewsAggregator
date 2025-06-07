@@ -1,16 +1,22 @@
 const feeds = {
-  "Catholicism": "https://www.vaticannews.va/en.rss.xml",
-  "Orthodox Christianity": "https://orthochristian.com/rss.xml",
-  "Latter-day Saints": "https://newsroom.churchofjesuschrist.org/rss",
-  "Judaism": "https://www.jta.org/feed",
-  "Islam": "https://aboutislam.net/blog/feed",
-  "Hinduism": "https://www.speakingtree.in/rss?c=hinduisim",
-  "Buddhism": "https://tricycle.org/feed/",
-  "Sojourners (Christian)": "https://sojo.net/rss.xml",
-  "Progressive Theology": "http://www.progressivetheology.org/rss.xml",
-  "Sikhism": "https://www.sikh24.com/feed/",
-  "General Religion": "https://religionnews.com/feed/",
-  "Religion & Ethics": "https://www.abc.net.au/news/feed/51120/rss.xml"
+  "Catholicism": ["https://www.vaticannews.va/en.rss.xml"],
+  "Orthodox Christianity": [
+    "https://www.oca.org/news/portfolio-type/news?feed=rss2",
+    "https://orthochristian.com/rss.xml"
+  ],
+  "Latter-day Saints": ["https://newsroom.churchofjesuschrist.org/rss"],
+  "Judaism": ["https://www.jta.org/feed"],
+  "Islam": ["https://aboutislam.net/blog/feed"],
+  "Hinduism": [
+    "https://www.hinduhumanrights.info/feed/",
+    "https://timesofindia.indiatimes.com/rssfeeds/-2128936835.cms"
+  ],
+  "Buddhism": ["https://tricycle.org/feed/"],
+  "Sojourners (Christian)": ["https://sojo.net/rss.xml"],
+  "Progressive Theology": ["http://www.progressivetheology.org/rss.xml"],
+  "Sikhism": ["https://www.sikh24.com/feed/"],
+  "General Religion": ["https://religionnews.com/feed/"],
+  "Religion & Ethics": ["https://www.abc.net.au/news/feed/51120/rss.xml"]
 };
 
 const quotes = [
@@ -28,26 +34,37 @@ function loadQuote() {
 }
 
 async function loadFeeds() {
-  for (const [religion, url] of Object.entries(feeds)) {
-    const api = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(url)}`;
-    try {
-      const res = await fetch(api);
-      const data = await res.json();
+  for (const [religion, urls] of Object.entries(feeds)) {
+    const articles = [];
 
-      if (!data.items || data.items.length === 0) throw new Error('No items returned');
+    for (const url of urls) {
+      const api = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(url)}`;
+      try {
+        const res = await fetch(api);
+        const data = await res.json();
 
-      const section = document.createElement('section');
-      section.classList.add('news-block');
-      section.innerHTML = `<h2>${religion}</h2>` + data.items.slice(0, 5).map(item =>
-        `<p><a href="${item.link}" target="_blank">${item.title}</a></p>`).join('');
-      document.getElementById('feedContainer').appendChild(section);
-    } catch (error) {
-      const fallback = document.createElement('section');
-      fallback.classList.add('news-block');
-      fallback.innerHTML = `<h2>${religion}</h2><p style="color:red;">(Feed failed to load)</p>`;
-      document.getElementById('feedContainer').appendChild(fallback);
-      console.error(`❌ Error loading ${religion}:`, error);
+        if (data.items && data.items.length > 0) {
+          articles.push(...data.items.slice(0, 5));
+        }
+      } catch (error) {
+        console.error(`❌ Error loading ${religion} (${url}):`, error);
+      }
     }
+
+    const section = document.createElement('section');
+    section.classList.add('news-block');
+    section.innerHTML = `<h2>${religion}</h2>`;
+
+    if (articles.length > 0) {
+      section.innerHTML += articles
+        .slice(0, 6)
+        .map(item => `<p><a href="${item.link}" target="_blank">${item.title}</a></p>`)
+        .join('');
+    } else {
+      section.innerHTML += `<p style="color:red;">(Feed failed to load)</p>`;
+    }
+
+    document.getElementById('feedContainer').appendChild(section);
   }
 }
 
