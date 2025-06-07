@@ -1,18 +1,17 @@
 const feeds = {
   "Catholicism": "https://www.vaticannews.va/en.rss.xml",
-  "Orthodox Christianity": "https://www.oca.org/news/rss",
+  "Orthodox Christianity": "https://www.oca.org/news/portfolio-type/news?feed=rss2",
   "Latter-day Saints": "https://newsroom.churchofjesuschrist.org/rss",
   "Judaism": "https://www.jta.org/feed",
   "Islam": "https://aboutislam.net/blog/feed",
   "Hinduism": "https://www.hinduismtoday.com/blogs-news/news/",
   "Buddhism": "https://tricycle.org/feed/",
-  "Evangelical": "https://aleteia.org/feed/",
-  "Progressive Christian": "https://progressivechristianity.org/feed/",
+  "Sojourners (Christian)": "https://sojo.net/rss.xml",
+  "Progressive Theology": "http://www.progressivetheology.org/rss.xml",
   "Sikhism": "https://www.sikhnet.com/rss/articles",
   "General Religion": "https://religionnews.com/feed/",
   "Religion & Ethics": "https://www.abc.net.au/news/feed/51120/rss.xml"
 };
-
 
 const quotes = [
   '“Love your neighbor as yourself.” – Matthew 22:39',
