@@ -1,10 +1,13 @@
 const feeds = {
-  Christianity: 'https://www.christianitytoday.com/ct/rss.xml',
-  Judaism: 'https://www.jta.org/feed',
-  Islam: 'https://www.soundvision.com/rss/articles',
-  Buddhism: 'https://tricycle.org/feed/',
-  Hinduism: 'https://www.hinduismtoday.com/blogs-news/news/',
-  LDS: 'https://newsroom.churchofjesuschrist.org/rss'
+  "Judaism": "https://www.jta.org/feed",
+  "Catholicism": "https://www.catholicnewsagency.com/rss.xml",
+  "Orthodox Christianity": "https://orthochristian.com/rss.xml",
+  "Mainline Protestant": "https://umc.org/en/rss-feeds/news",
+  "Evangelical": "https://www.christianitytoday.com/ct/rss.xml"
+  "Latter-day Saints": "https://newsroom.churchofjesuschrist.org/rss",
+  "Islam": "https://muslimmatters.org/feed/",
+  "Hinduism": "https://www.hinduismtoday.com/blogs-news/news/",
+  "Buddhism": "https://tricycle.org/feed/",
 };
 
 const quotes = [
