@@ -37,12 +37,7 @@ function loadQuoteAndImage() {
   const pair = quoteImagePairs[Math.floor(Math.random() * quoteImagePairs.length)];
   document.getElementById('dailyQuote').textContent = pair.quote;
   document.getElementById('faithImage').src = pair.image;
-}
-
-function loadQuoteAndImage() {
-  const pair = quoteImagePairs[0];
-  document.getElementById('dailyQuote').textContent = pair.quote;
-  document.getElementById('faithImage').src = pair.image;
+  document.getElementById('faithImage').alt = pair.quote;
 }
 
 function showDateTime() {
@@ -67,11 +62,16 @@ async function loadFeeds() {
   const feeds = {
     "Religion & Ethics": ["https://www.abc.net.au/news/feed/51120/rss.xml"],
     "General Religion": ["https://religionnews.com/feed/"],
-    "Latter-day Saints": ["https://newsroom.churchofjesuschrist.org/rss"],
-    "Judaism": ["https://www.jta.org/feed"],
-    "Islam": ["https://aboutislam.net/blog/feed"],
+    "Baháʼí Faith": ["https://www.bahainews.ca/rss.xml"],
     "Buddhism": ["https://tricycle.org/feed/"],
-    "Catholicism": ["https://www.vaticannews.va/en.rss.xml"]
+    "Catholicism": ["https://www.vaticannews.va/en.rss.xml"],
+    "Christianity": ["https://www.christianitytoday.com/ct/rss.xml"],
+    "Hinduism": ["https://www.hinduismtoday.com/blogs-news/news/"],
+    "Islam": ["https://aboutislam.net/blog/feed"],
+    "Judaism": ["https://www.jta.org/feed"],
+    "Latter-day Saints": ["https://newsroom.churchofjesuschrist.org/rss"],
+    "Orthodox Christianity": ["https://orthochristian.com/rss/"],
+    "Sikhism": ["https://www.sikhnet.com/rss/articles"]
   };
 
   for (const [religion, urls] of Object.entries(feeds)) {
@@ -92,7 +92,7 @@ async function loadFeeds() {
 
     const section = document.createElement('section');
     section.classList.add('news-block');
-    section.innerHTML = `<h2>${religion}</h2>`;
+    section.innerHTML = `<h2>${religion.toUpperCase()}</h2>`;
 
     if (religion === "Religion & Ethics") {
       section.querySelector('h2').style.color = 'red';
