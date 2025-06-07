@@ -60,19 +60,30 @@ function showDateTime() {
 
 async function loadFeeds() {
   const feeds = {
-    "Religion & Ethics": ["https://www.abc.net.au/news/feed/51120/rss.xml"],
-    "General Religion": ["https://religionnews.com/feed/"],
-    "Baháʼí Faith": ["https://www.bahainews.ca/rss.xml"],
-    "Buddhism": ["https://tricycle.org/feed/"],
-    "Catholicism": ["https://www.vaticannews.va/en.rss.xml"],
-    "Christianity": ["https://www.christianitytoday.com/ct/rss.xml"],
-    "Hinduism": ["https://www.hinduismtoday.com/blogs-news/news/"],
-    "Islam": ["https://aboutislam.net/blog/feed"],
-    "Judaism": ["https://www.jta.org/feed"],
-    "Latter-day Saints": ["https://newsroom.churchofjesuschrist.org/rss"],
-    "Orthodox Christianity": ["https://orthochristian.com/rss/"],
-    "Sikhism": ["https://www.sikhnet.com/rss/articles"]
-  };
+  "Religion & Ethics": ["https://www.abc.net.au/news/feed/51120/rss.xml"],
+  "General Religion": ["https://religionnews.com/feed/"],
+  "Baháʼí Faith": ["https://www.bahaiblog.net/feed/"],
+  "Buddhism": ["https://tricycle.org/feed/"],
+  "Catholicism": ["https://www.vaticannews.va/en.rss.xml"],
+  "Hinduism": [
+    "https://www.hinduhumanrights.info/feed/",
+    "https://timesofindia.indiatimes.com/rssfeeds/-2128936835.cms"
+  ],
+  "Islam": ["https://aboutislam.net/blog/feed"],
+  "Judaism": ["https://www.jta.org/feed"],
+  "Latter-day Saints": ["https://newsroom.churchofjesuschrist.org/rss"],
+  "Mainstream Christianity": [
+    "https://christiantoday.com/rss.xml",
+    "https://www.christianpost.com/rss/news.xml"
+  ],
+  "Orthodox Christianity": [
+    "https://www.oca.org/news/feed",
+    "https://orthochristian.com/rss.xml"
+  ],
+  "Progressive Theology": ["http://www.progressivetheology.org/rss.xml"],
+  "Sikhism": ["https://www.sikh24.com/feed/"],
+  "Sojourners (Christian)": ["https://sojo.net/rss.xml"]
+};
 
   for (const [religion, urls] of Object.entries(feeds)) {
     const articles = [];
