@@ -1,6 +1,7 @@
 const feeds = {
   "Religion & Ethics": ["https://www.abc.net.au/news/feed/51120/rss.xml"],
   "General Religion": ["https://religionnews.com/feed/"],
+  "Baháʼí Faith": ["https://www.bahaiblog.net/feed/"],
   "Buddhism": ["https://tricycle.org/feed/"],
   "Catholicism": ["https://www.vaticannews.va/en.rss.xml"],
   "Hinduism": [
