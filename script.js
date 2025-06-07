@@ -12,9 +12,13 @@ const feeds = {
     "https://timesofindia.indiatimes.com/rssfeeds/-2128936835.cms"
   ],
   "Buddhism": ["https://tricycle.org/feed/"],
+  "Sikhism": ["https://www.sikh24.com/feed/"],
   "Sojourners (Christian)": ["https://sojo.net/rss.xml"],
   "Progressive Theology": ["http://www.progressivetheology.org/rss.xml"],
-  "Sikhism": ["https://www.sikh24.com/feed/"],
+  "Mainstream Christianity": [
+    "https://www.christianitytoday.com/ct/rss.xml",
+    "https://www.premierchristianity.com/feed"
+  ],
   "General Religion": ["https://religionnews.com/feed/"],
   "Religion & Ethics": ["https://www.abc.net.au/news/feed/51120/rss.xml"]
 };
