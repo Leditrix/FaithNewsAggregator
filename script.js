@@ -60,17 +60,39 @@ function showDateTime() {
 
 async function loadFeeds() {
   const feeds = {
-  "Religion & Ethics": ["https://www.abc.net.au/news/feed/51120/rss.xml"],
-  "General Religion": ["https://religionnews.com/feed/"],
-  "Baháʼí Faith": ["https://www.bahaiblog.net/feed/"],
-  "Buddhism": ["https://tricycle.org/feed/"],
+  "Religion & Ethics": [
+    "https://www.abc.net.au/news/feed/51120/rss.xml",
+    "https://religionnews.com/feed/",
+    "https://www.npr.org/rss/rss.php?id=1004"
+  ],
+  "General Religion": [
+    "https://religionnews.com/feed/",
+    "https://www.patheos.com/blogs/futureofthefaith/feed/",
+    "https://www.beliefnet.com/feeds/rss.aspx"
+  ],
+  "Baháʼí Faith": [
+    "https://www.bahaiblog.net/feed/",
+    "https://news.bahai.org/feed/"
+  ],
+  "Buddhism": [
+    "https://tricycle.org/feed/",
+    "https://buddhaweekly.com/feed/",
+    "https://plumvillage.org/feed/"
+  ],
   "Catholicism": ["https://www.vaticannews.va/en.rss.xml"],
   "Hinduism": [
-    "https://www.hinduhumanrights.info/feed/",
-    "https://timesofindia.indiatimes.com/rssfeeds/-2128936835.cms"
+    "https://www.hinduismtoday.com/feed",
+    "https://feeds.feedburner.com/HinduDevotionalBlog"
   ],
-  "Islam": ["https://aboutislam.net/blog/feed"],
-  "Judaism": ["https://www.jta.org/feed"],
+  "Islam": [
+    "https://aboutislam.net/blog/feed",
+    "https://muslimmatters.org/feed/"
+  ],
+  "Judaism": [
+    "https://www.jta.org/feed",
+    "https://www.ritualwell.org/blog/rss",
+    "https://www.theyeshivaworld.com/rss"
+  ],
   "Latter-day Saints": [
     "https://newsroom.churchofjesuschrist.org/rss",
     "https://latterdaysaintmag.com/feed",
@@ -79,7 +101,8 @@ async function loadFeeds() {
   ],
   "Mainstream Christianity": [
     "https://christiantoday.com/rss.xml",
-    "https://www.christianpost.com/rss/news.xml"
+    "https://www.christianpost.com/rss/news.xml",
+    "https://www.christianitytoday.com/ct/rss.xml"
   ],
   "Orthodox Christianity": [
     "https://www.oca.org/news/feed",
