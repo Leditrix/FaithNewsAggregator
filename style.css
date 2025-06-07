@@ -9,7 +9,7 @@ body {
 header {
   background: #ffffff;
   color: #000000;
-  padding: 2rem 1rem 1rem;
+  padding: 2rem 1rem 0.5rem;
 }
 
 h1 {
@@ -25,6 +25,12 @@ h1 {
   color: #555;
   margin-top: 0.5rem;
   text-transform: uppercase;
+}
+
+#datetime {
+  font-size: 0.9rem;
+  color: #444;
+  margin-top: 0.3rem;
 }
 
 #quotes {
@@ -50,11 +56,10 @@ main {
   text-align: left;
 }
 
-/* Vertical lines only on sides of center column */
+/* Borders only on left and right of center column */
 .news-block:nth-child(3n+1) {
   border-right: 1px solid #ccc;
 }
-
 .news-block:nth-child(3n+3) {
   border-left: 1px solid #ccc;
 }
@@ -70,26 +75,15 @@ main {
   text-align: center;
 }
 
+.news-block h2:contains("Religion & Ethics") {
+  color: red;
+}
+
 .news-block p {
-  margin: 0.25rem 0;
+  margin: 0.6rem 0; /* More vertical space between headlines */
 }
 
 .news-block a {
   color: #000;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 0.95rem;
-  text-transform: none;
-  display: block;
-}
-
-.news-block a:hover {
-  text-decoration: underline;
-}
-
-footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  font-size: 0.75rem;
-  color: #666;
-}
+  font-weight: bo
