@@ -59,14 +59,10 @@ function showDateTime() {
 }
 
 async function loadFeeds() {
-  const feeds = {
+const feeds = {
   "Religion & Ethics": [
     "https://www.abc.net.au/news/feed/51120/rss.xml",
     "https://www.npr.org/rss/rss.php?id=1004"
-  ],
-  "Progressive Theology": [
-    "http://www.progressivetheology.org/rss.xml",
-    "https://progressivechristianity.org/feed/"
   ],
   "General Religion": [
     "https://religionnews.com/feed/",
@@ -112,12 +108,10 @@ async function loadFeeds() {
     "https://orthochristian.com/rss.xml"
   ],
   "Progressive Theology": [
-    "http://www.progressivetheology.org/rss.xml",
-    "https://progressivechristianity.org/feed/"
+    "http://www.progressivetheology.org/rss.xml"
   ],
   "Sikhism": [
-    "https://www.sikh24.com/feed/",
-    "https://www.sikhnet.com/news_rss.xml"
+    "https://www.sikh24.com/feed/"
   ],
   "Sojourners (Christian)": [
     "https://sojo.net/rss.xml",
