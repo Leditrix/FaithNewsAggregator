@@ -103,10 +103,6 @@ async function loadFeeds() {
     "https://www.christianpost.com/rss/news.xml",
     "https://www.christianitytoday.com/ct/rss.xml"
   ],
-  "Orthodox Christianity": [
-    "https://www.oca.org/news/feed",
-    "https://orthochristian.com/rss.xml"
-  ],
   "Progressive Theology": [
     "http://www.progressivetheology.org/rss.xml",
     "https://progressivechristianity.org/feed/"
