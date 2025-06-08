@@ -62,7 +62,6 @@ async function loadFeeds() {
   const feeds = {
   "Religion & Ethics": [
     "https://www.abc.net.au/news/feed/51120/rss.xml",
-    "https://religionnews.com/feed/",
     "https://www.npr.org/rss/rss.php?id=1004"
   ],
   "General Religion": [
