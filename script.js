@@ -64,6 +64,10 @@ async function loadFeeds() {
     "https://www.abc.net.au/news/feed/51120/rss.xml",
     "https://www.npr.org/rss/rss.php?id=1004"
   ],
+  "Progressive Theology": [
+    "http://www.progressivetheology.org/rss.xml",
+    "https://progressivechristianity.org/feed/"
+  ],
   "General Religion": [
     "https://religionnews.com/feed/",
     "https://www.patheos.com/blogs/futureofthefaith/feed/",
@@ -102,6 +106,10 @@ async function loadFeeds() {
     "https://christiantoday.com/rss.xml",
     "https://www.christianpost.com/rss/news.xml",
     "https://www.christianitytoday.com/ct/rss.xml"
+  ],
+  "Orthodox Christianity": [
+    "https://www.oca.org/news/feed",
+    "https://orthochristian.com/rss.xml"
   ],
   "Progressive Theology": [
     "http://www.progressivetheology.org/rss.xml",
