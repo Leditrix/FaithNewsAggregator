@@ -119,41 +119,99 @@ const feeds = {
   ]
 };
 
-  for (const [religion, urls] of Object.entries(feeds)) {
-    const articles = [];
-
-    for (const url of urls) {
-      const api = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(url)}`;
-      try {
-        const res = await fetch(api);
-        const data = await res.json();
-        if (data.items && data.items.length > 0) {
-          articles.push(...data.items.slice(0, 5));
-        }
-      } catch (error) {
-        console.error(`Error loading ${religion} feed:`, error);
+/* 
+for (const [religion, urls] of Object.entries(feeds)) {
+  const articles = [];
+  for (const url of urls) {
+    const api = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(url)}`;
+    try {
+      const res = await fetch(api);
+      const data = await res.json();
+      if (data.items && data.items.length > 0) {
+        articles.push(...data.items.slice(0, 5));
       }
+    } catch (error) {
+      console.error(`Error loading ${religion} feed:`, error);
     }
+  }
 
-    const section = document.createElement('section');
-    section.classList.add('news-block');
-    section.innerHTML = `<h2>${religion.toUpperCase()}</h2>`;
+  const section = document.createElement('section');
+  section.classList.add('news-block');
+  const heading = document.createElement('h2');
+  heading.textContent = religion.toUpperCase();
+  heading.style.textAlign = 'center';
+  section.appendChild(heading);
 
-    if (religion === "Religion & Ethics") {
-      section.querySelector('h2').style.color = 'red';
+  if (religion === "Religion & Ethics") {
+    heading.style.color = 'red';
+  }
+
+  if (articles.length > 0) {
+    for (const item of articles) {
+      const para = document.createElement('p');
+      const link = document.createElement('a');
+      link.href = item.link;
+      link.textContent = item.title;
+      link.target = "_blank";
+      para.appendChild(link);
+      section.appendChild(para);
     }
+  } else {
+    const errorPara = document.createElement('p');
+    errorPara.textContent = "(Feed failed to load)";
+    errorPara.style.color = 'red';
+    section.appendChild(errorPara);
+  }
 
-    if (articles.length > 0) {
-      section.innerHTML += articles
-        .map(item => `<p><a href="${item.link}" target="_blank">${item.title}</a></p>`)
-        .join('');
-    } else {
-      section.innerHTML += `<p style="color:red;">(Feed failed to load)</p>`;
+  document.getElementById('feedContainer').appendChild(section);
+}
+*/
+const testReligion = "Sojourners (Christian)";
+const urls = [
+  "https://sojo.net/rss.xml",
+  "http://feeds.sojo.net/sojourners/magazine"
+];
+const articles = [];
+
+for (const url of urls) {
+  const api = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(url)}`;
+  try {
+    const res = await fetch(api);
+    const data = await res.json();
+    if (data.items && data.items.length > 0) {
+      articles.push(...data.items.slice(0, 5));
     }
-
-    document.getElementById('feedContainer').appendChild(section);
+  } catch (error) {
+    console.error(`Error loading ${testReligion} feed:`, error);
   }
 }
+
+const section = document.createElement('section');
+section.classList.add('news-block');
+
+const heading = document.createElement('h2');
+heading.textContent = testReligion.toUpperCase();
+heading.style.textAlign = 'center';
+section.appendChild(heading);
+
+if (articles.length > 0) {
+  for (const item of articles) {
+    const para = document.createElement('p');
+    const link = document.createElement('a');
+    link.href = item.link;
+    link.textContent = item.title;
+    link.target = "_blank";
+    para.appendChild(link);
+    section.appendChild(para);
+  }
+} else {
+  const errorPara = document.createElement('p');
+  errorPara.textContent = "(Feed failed to load)";
+  errorPara.style.color = 'red';
+  section.appendChild(errorPara);
+}
+
+document.getElementById('feedContainer').appendChild(section);
 
 window.onload = () => {
   loadQuoteAndImage();
