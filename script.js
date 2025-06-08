@@ -106,9 +106,10 @@ async function loadFeeds() {
   "Orthodox Christianity": [
     "https://www.oca.org/news/feed",
     "https://orthochristian.com/rss.xml"
-  ],"Progressive Theology": [
-  "http://www.progressivetheology.org/rss.xml",
-  "https://progressivechristianity.org/feed/"
+  ],
+  "Progressive Theology": [
+    "http://www.progressivetheology.org/rss.xml",
+    "https://progressivechristianity.org/feed/"
   ],
   "Sikhism": [
     "https://www.sikh24.com/feed/",
