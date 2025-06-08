@@ -106,10 +106,18 @@ async function loadFeeds() {
   "Orthodox Christianity": [
     "https://www.oca.org/news/feed",
     "https://orthochristian.com/rss.xml"
+  ],"Progressive Theology": [
+  "http://www.progressivetheology.org/rss.xml",
+  "https://progressivechristianity.org/feed/"
   ],
-  "Progressive Theology": ["http://www.progressivetheology.org/rss.xml"],
-  "Sikhism": ["https://www.sikh24.com/feed/"],
-  "Sojourners (Christian)": ["https://sojo.net/rss.xml"]
+  "Sikhism": [
+    "https://www.sikh24.com/feed/",
+    "https://www.sikhnet.com/news_rss.xml"
+  ],
+  "Sojourners (Christian)": [
+    "https://sojo.net/rss.xml",
+    "http://feeds.sojo.net/sojourners/magazine"
+  ]
 };
 
   for (const [religion, urls] of Object.entries(feeds)) {
