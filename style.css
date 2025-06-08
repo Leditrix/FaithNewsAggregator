@@ -16,8 +16,10 @@ h1 {
   font-size: 3rem;
   font-weight: 900;
   margin: 0;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Cinzel', serif;
+  font-variant: small-caps;
+  text-transform: none;
 }
 
 .subhead {
